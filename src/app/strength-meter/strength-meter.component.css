@@ -1,0 +1,39 @@
+.strength_meter {
+  display: flex;
+  width: 100%;
+  margin: 20px 0 0 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+.strength_meter_item {
+  height: 4px;
+  width: 100%;
+  background: gray;
+  border: 1px solid darkgray;
+}
+
+.danger {
+  .strength_meter_item {
+    background-color: red;
+  }
+}
+
+.weak {
+  .strength_meter_item:first-child {
+    background-color: red;
+  }
+}
+
+.medium {
+  .strength_meter_item:not(:last-child) {
+    background-color: yellow;
+  }
+}
+
+.strong {
+  .strength_meter_item {
+    background-color: green;
+  }
+}
